@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dataItemCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/thunderstormColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/dateAndHourTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:padding="5dp"
+                    android:text="2023-8-18 00:00"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/forecastTypeAnimation"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/forecastTypeAnimation"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/clear_animation" />
+
+                <TextView
+                    android:id="@+id/forecastWeatherConditionTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Clear"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/forecastTypeAnimation"
+                    app:layout_constraintTop_toBottomOf="@+id/forecastTypeAnimation" />
+
+                <TextView
+                    android:id="@+id/forecastWeatherDescriptionTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins"
+                    android:text="weather description"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintBottom_toTopOf="@+id/forecastFeelsLikeTV"
+                    app:layout_constraintEnd_toStartOf="@+id/forecastTypeAnimation"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dateAndHourTV" />
+
+                <TextView
+                    android:id="@+id/forecastFeelsLikeTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Feels like: "
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/forecastMaxTempTV"
+                    app:layout_constraintEnd_toEndOf="@+id/forecastWeatherDescriptionTV"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/forecastWeatherDescriptionTV"
+                    app:layout_constraintTop_toBottomOf="@+id/forecastWeatherDescriptionTV" />
+
+                <TextView
+                    android:id="@+id/forecastTempTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/number_degree"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/forecastWeatherConditionTV"
+                    app:layout_constraintTop_toBottomOf="@+id/forecastWeatherConditionTV" />
+
+                <TextView
+                    android:id="@+id/forecastMaxTempTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Max temp: "
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/forecastMinTempTV"
+                    app:layout_constraintEnd_toEndOf="@+id/forecastFeelsLikeTV"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/forecastFeelsLikeTV"
+                    app:layout_constraintTop_toBottomOf="@+id/forecastFeelsLikeTV" />
+
+
+                <TextView
+                    android:id="@+id/forecastMinTempTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Min temp: "
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/forecastHumidityTV"
+                    app:layout_constraintEnd_toEndOf="@+id/forecastMaxTempTV"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/forecastMaxTempTV"
+                    app:layout_constraintTop_toBottomOf="@+id/forecastMaxTempTV" />
+
+                <TextView
+                    android:id="@+id/forecastHumidityTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Humidity: "
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/forecastMinTempTV"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/forecastMinTempTV"
+                    app:layout_constraintTop_toBottomOf="@+id/forecastMinTempTV" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

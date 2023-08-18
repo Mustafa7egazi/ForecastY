@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="rainyColor">#40666A</color>
+    <color name="rainyTextColor">#C9E8E0</color>
+    <color name="thunderstormColor">#615273</color>
+    <color name="thunderstormTextColor">#C2B8FF</color>
+    <color name="drizzleColor">#7FC3AE</color>
+    <color name="drizzleTextColor">#C9E8E0</color>
+    <color name="sunnyColor">#FAE2BD</color>
+    <color name="sunnyTextColor">#EFAA82</color>
+    <color name="cloudyColor">#9090AC</color>
+    <color name="cloudyTextColor">#484A82</color>
+    <color name="snowyColor">#A7ACC4</color>
+    <color name="snowyTextColor">#E2E2E3</color>
+</resources>
